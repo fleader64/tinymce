@@ -201,7 +201,7 @@ describe('browser.tinymce.plugins.paste.ImagePasteTest', () => {
     const editor = hook.editor();
 
     AgarClipboard.pasteDataTransfer(TinyDom.body(editor), (dataTransfer) => {
-      dataTransfer.items.add('anything', 'some/othermime');
+      dataTransfer.items.add('anything', 'text/plain');
       dataTransfer.items.add(base64ToBlob(base64ImgSrc, 'image/gif', 'image.gif'));
     });
 
